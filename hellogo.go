@@ -292,4 +292,51 @@ func main() {
 	// 		pl(arr3[i][j])
 	// 	}
 	// }
+
+	//Arrays
+	aStr1 := "abcde"
+	rArr := []rune(aStr1)
+
+	pl(rArr)
+
+	for _,v := range rArr {
+		fmt.Printf("Rune Array : %d\n", v)
+	}
+	byteArr := []byte{'a', 'b', 'c'}
+	bStr := string(byteArr[:])
+
+	pl("I'm a string: ", bStr)
+
+	//Slices
+	sl1 := make([]string, 6)
+	sl1[0] = "Society"
+	sl1[1] = "of"
+	sl1[2] = "the"
+	sl1[3] = "Simulated"
+	sl1[4] = "Universe"
+
+	pl("Slice Size : ", len(sl1))
+
+	//Iterating through slice
+	for i := 0; i < len(sl1); i++ {
+		pl(sl1[i])
+	}
+
+	//Using range
+	for _, x := range sl1 {
+		pl(x)
+	}
+
+	sArr := [5]int{1,2,3,4,5}
+	sl3 := sArr[0:2]
+	pl(sl3)
+	pl("1st 3 : ", sArr[:3])
+	pl("Last 3 : ", sArr[2:])
+	sArr[0] = 10
+	pl("sl3 : ", sl3)
+	pl("sArr : ", sArr)
+	pl("sl4 : ", sl4[0])
+
+
+
 }
